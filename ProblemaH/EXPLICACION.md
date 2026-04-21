@@ -27,8 +27,7 @@ Para cada registro:
 4. Al terminar, si $\text{ocupacion} \neq 0$, es inválido, si no, es válido.
 5. Imprimimos `VALIDO` o `INVALIDO` según corresponda.
 
-No hace falta ninguna estructura de datos adicional: un único entero para la
-ocupación y un flag son suficientes.
+No hace falta ninguna estructura de datos adicional: un único entero es suficiente.
 
 # Soluciones
 
