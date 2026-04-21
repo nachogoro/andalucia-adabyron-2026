@@ -22,10 +22,7 @@ mejor. Esta opción es inviable por el tamaño del problema.
 Repartir los $N$ tramos entre $K$ brigadas respetando la contigüidad
 equivale a elegir los puntos de corte: hay $N - 1$ huecos entre tramos
 consecutivos y tenemos que escoger $K - 1$ de ellos para separar las
-brigadas. Eso da
-$$
-\binom{N - 1}{K - 1}
-$$
+brigadas. Eso da $\binom{N - 1}{K - 1}$
 repartos distintos con $K$ brigadas no vacías (si permitimos brigadas
 vacías, el número es aún mayor: $\binom{N + K - 1}{K - 1}$).
 
