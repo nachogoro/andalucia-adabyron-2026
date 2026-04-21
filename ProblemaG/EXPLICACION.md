@@ -53,7 +53,7 @@ máximo más bajo.
 
 También se puede plantear una DP: sea $f(i, k)$ el mínimo del máximo al
 repartir los primeros $i$ tramos entre $k$ brigadas. La recurrencia
-$$ f(i, k) = \min_{j < i} \max\bigl(f(j, k-1),\; h_{j+1} + \dots + h_i\bigr) $$
+$f(i, k) = \min_{j < i} \max\bigl(f(j, k-1),\; h_{j+1} + \dots + h_i\bigr)$
 es correcta, pero cuesta $O(N^2 K)$ tiempo y $O(N K)$ memoria. Con $N, K
 \leq 10^5$, ni el tiempo ni la memoria entran dentro de los límites.
 
@@ -73,7 +73,7 @@ suficiente, ningún valor menor lo será.
 Esa monotonía es exactamente lo que necesitamos para aplicar **búsqueda
 binaria** sobre $H$.
 
-## Paso 2: búsqueda binaria sobre la respuesta
+## Paso 1: búsqueda binaria sobre la respuesta
 
 Los extremos naturales del intervalo de búsqueda son:
 
@@ -94,7 +94,7 @@ Terminamos cuando $\text{lo} = \text{hi}$; ese valor es la respuesta.
 Cada iteración reduce el rango a la mitad, por lo que hacemos
 $O(\log(\sum h_i))$ pasos.
 
-## Paso 3: comprobar $\text{factible}(H)$ de forma greedy
+## Paso 2: comprobar $\text{factible}(H)$ de forma greedy
 
 Queda decidir, para un $H$ dado, si existe un reparto válido en como mucho
 $K$ bloques contiguos. La clave es que se puede hacer con una estrategia
@@ -132,9 +132,7 @@ binaria sobre las sumas prefijas**.
 #### Precomputación
 
 Calculamos una vez el array de sumas prefijas:
-$$
-P_0 = 0,\qquad P_i = h_1 + h_2 + \dots + h_i.
-$$
+$P_0 = 0,\qquad P_i = h_1 + h_2 + \dots + h_i$.
 
 Como los $h_i$ son no negativos, $P$ es **no decreciente**. La suma del
 bloque $(l, r]$ (tramos $l+1, \dots, r$) es simplemente $P_r - P_l$.
@@ -165,10 +163,7 @@ la muralla, el reparto es posible; si no, no.
 ### Complejidad del test
 
 Cada brigada se resuelve con una búsqueda binaria de coste $O(\log N)$, y
-hacemos como mucho $K$ iteraciones:
-$$
-O(K \log N)
-$$
+hacemos como mucho $K$ iteraciones: $O(K \log N)$
 por llamada a $\text{factible}(H)$, en lugar de $O(N)$. Cuando $K \ll N$, la
 mejora es notable; en el peor caso $K = N$ no mejora al lineal, pero tampoco
 empeora mucho.
