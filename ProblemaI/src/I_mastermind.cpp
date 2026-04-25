@@ -124,8 +124,9 @@ int pick_best_idx(const vector<Cand>& candidates, int L, int N) {
 int main() {
 	int L, N, Q;
 
-	while (cin >> L >> N >> Q) {
+	while (cin >> L) {
 		if (L == 0) break;
+		cin >> N >> Q;
 
 		vector<Cand> candidates = generate_all(L, N);
 		Cand G;

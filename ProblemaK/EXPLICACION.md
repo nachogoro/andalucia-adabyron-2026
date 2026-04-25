@@ -87,5 +87,5 @@ máximo, que empareja los $4$ jugadores y por tanto da la respuesta `YES`):
 
 | Solución | Descripción | Verificado con el juez |
 | :------: | :---------- | :--------------------: |
-| [K_flujo.cpp](src/K_flujo.cpp) | Flujo máximo con Dinic | :x: |
-| [K_matching.cpp](src/K_matching.cpp) | Emparejamiento bipartito con Hopcroft–Karp (duplicando cada rol en $L$ asientos) | :x: |
+| [K_flujo.cpp](src/K_flujo.cpp) | Flujo máximo con Dinic | :white_check_mark: |
+| [K_matching.cpp](src/K_matching.cpp) | Emparejamiento bipartito con Hopcroft–Karp (duplicando cada rol en $L$ asientos) | :white_check_mark: |

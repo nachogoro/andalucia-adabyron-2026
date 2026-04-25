@@ -33,4 +33,4 @@ No hace falta ninguna estructura de datos adicional: un único entero es suficie
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [H.cpp](src/H.cpp) | :x: |
+| [H.cpp](src/H.cpp) | :white_check_mark: |

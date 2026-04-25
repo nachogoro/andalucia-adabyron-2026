@@ -13,7 +13,7 @@ del nivel superior, si la copa está en un extremo del nivel y (3) solo
 sostiene a una única copa del nivel superior si la copa es una de la
 esquinas del nivel.
 
-> Figura 1: Diagrama de la pirámide de copas y el flujo
+![Figura 1: Diagrama de la pirámide de copas y el flujo](images/diagrama.png)
 
 En esta pirámide se sirve toda la bebida sobre la copa en la cima de la
 pirámide. Cuando una copa se llena hasta su capacidad máxima, el líquido

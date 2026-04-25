@@ -19,5 +19,5 @@ int num = v[0]*1000 + v[1]*100 + v[2]*10 + v[3];
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [E.cpp](src/E.cpp) | :x: |
+| [E.cpp](src/E.cpp) | :white_check_mark: |
 

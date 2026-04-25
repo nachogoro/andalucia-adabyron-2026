@@ -82,8 +82,9 @@ bool fits_all(int candidate, const vector<Answer>& answers) {
 int main() {
 	int L, N, Q;
 
-	while(cin >> L >> N >> Q) {
+	while (cin >> L) {
 		if (L == 0) break;
+		cin >> N >> Q;
 
 		set<int> candidates = generate_all(L, N);
 		vector<Answer> answers;

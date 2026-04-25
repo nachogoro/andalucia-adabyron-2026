@@ -39,8 +39,8 @@ qué problemas necesitan más trabajo:
 | I        | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | J        | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | K        | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x: |
-| L        | :white_check_mark: | :x: | :x: | :x: | :x: |
-| M        | :white_check_mark: | :x: | :x: | :x: | :x: |
+| L        | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| M        | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x: |
 
 ¡Anímate a contribuir incluso si ya existen soluciones para el problema que
 tenías en mente! El propósito de esta tabla es mostrar el estado actual del

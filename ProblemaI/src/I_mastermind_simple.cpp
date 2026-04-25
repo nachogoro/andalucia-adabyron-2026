@@ -84,8 +84,9 @@ int pick_best(const vector<int>& candidates, int L) {
 int main() {
 	int L, N, Q;
 
-	while (cin >> L >> N >> Q) {
+	while (cin >> L) {
 		if (L == 0) break;
+		cin >> N >> Q;
 
 		vector<int> candidates = generate_all(L, N);
 		bool first = true;

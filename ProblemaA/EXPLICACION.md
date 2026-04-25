@@ -46,5 +46,5 @@ y al imprimir la casilla hacer simplemente `std::cout << simbolo[ficha]`.
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [A.cpp](src/A.cpp) | :x: |
+| [A.cpp](src/A.cpp) | :white_check_mark: |
 

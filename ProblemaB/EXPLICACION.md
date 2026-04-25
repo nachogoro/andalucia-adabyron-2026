@@ -17,5 +17,5 @@ extraer el primer elemento y añadirlo al final.
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [B.cpp](src/B.cpp) | :x: |
+| [B.cpp](src/B.cpp) | :white_check_mark: |
 

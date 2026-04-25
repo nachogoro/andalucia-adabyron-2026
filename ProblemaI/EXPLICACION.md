@@ -111,6 +111,6 @@ el número de tests superados y la media de consultas usadas.
 
 | Solución | Descripción | Verificado con el juez |
 | :------: | :---------- | :--------------------: |
-| [I.cpp](src/I.cpp) | Fuerza bruta | :x: |
-| [I_mastermind_simple.cpp](src/I_mastermind_simple.cpp) | Minimax de Knuth restringido a candidatos, con muestreo | :x: |
-| [I_mastermind.cpp](src/I_mastermind.cpp) | Igual que la anterior, pero precomputando dígitos e histogramas por candidato | :x: |
+| [I.cpp](src/I.cpp) | Fuerza bruta | :white_check_mark: |
+| [I_mastermind_simple.cpp](src/I_mastermind_simple.cpp) | Minimax de Knuth restringido a candidatos, con muestreo | :white_check_mark: |
+| [I_mastermind.cpp](src/I_mastermind.cpp) | Igual que la anterior, pero precomputando dígitos e histogramas por candidato | :white_check_mark: |

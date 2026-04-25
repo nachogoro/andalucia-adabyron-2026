@@ -65,5 +65,5 @@ aristas puede multiplicar eso por mil más.
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [D.cpp](src/D.cpp) | :x: |
+| [D.cpp](src/D.cpp) | :white_check_mark: |
 

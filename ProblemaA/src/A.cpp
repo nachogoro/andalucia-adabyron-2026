@@ -62,12 +62,14 @@ void test_case() {
 		}
 	}
 
-	for (int r = 0; r < 8; ++r) {
+	// La primera línea impresa corresponde a la fila 8 del tablero, que en
+	// nuestra matriz es el índice 7.
+	for (int r = 7; r >= 0; --r) {
 		for (int c = 0; c < 8; ++c) {
 			cout << board[r][c];
 
 			if (c == 7) cout << "\n";
-			else cout << "  ";
+			else cout << " ";
 		}
 	}
 }

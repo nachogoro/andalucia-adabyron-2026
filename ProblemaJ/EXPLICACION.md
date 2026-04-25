@@ -43,4 +43,4 @@ espacio, o la cadena `NOPROCESO` si $E$ está vacía.
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [J.cpp](src/J.cpp) | :x: |
+| [J.cpp](src/J.cpp) | :white_check_mark: |

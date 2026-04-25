@@ -104,4 +104,4 @@ memoria, que cabe holgadamente dentro de los límites del problema.
 
 | Solución | Verificado con el juez |
 | :------: | :--------------------: |
-| [F.cpp](src/F.cpp) | :x: |
+| [F.cpp](src/F.cpp) | :white_check_mark: |
