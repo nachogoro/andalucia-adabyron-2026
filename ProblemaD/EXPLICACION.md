@@ -25,7 +25,7 @@ enteros y la distancia ya viene dada en km enteros, así que todo el
 cálculo se puede hacer con aritmética entera sin recurrir a `double`.
 
 Para cada par $(i, j)$ con $i < j$ se genera una arista con peso
-$\text{dist}_{ij} \cdot \text{diasPorKm}(\text{material}_{ij})$.
+$`\text{dist}_{ij} \cdot \text{diasPorKm}(\text{material}_{ij})`$ .
 
 # Kruskal
 
