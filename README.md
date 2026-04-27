@@ -72,7 +72,20 @@ concurso:
 
 ## Créditos
 
-No se conoce a quienes han creado y revisado los problemas.
+Los problemas han sido creados y revisados por:
+
+- Pablo Reina (CAUS)
+- Kenny Flores (CAUS)
+- Pablo Dávila Herrero (CAUS)
+- Miguel Olivero (US)
+- Antonio Manuel (US)
+- Francisco Chicano (UMA)
+- Gabriel Luque (UMA)
+- Eduardo Cañete (UCO)
+- Ángel Carmona (UCO)
+- Amelia Zafra (UCO)
+- José Fidel Argudo (UCA)
+- Rafael Guirado (UAL)
 
 En el directorio de cada problema se incluye un listado de personas que han
 contribuido a la solución del mismo, en el fichero `CONTRIBUYENTES.md`.

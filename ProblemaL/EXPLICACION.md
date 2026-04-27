@@ -13,7 +13,7 @@ añadidos que la complican:
    veces, así que tracking simple por carácter no basta.
 
 La idea es reducir el problema a una ventana deslizante sobre las
-**apariciones**, no sobre los caracteres del ADN.
+apariciones, no sobre los caracteres del ADN.
 
 # Pasos
 
@@ -96,8 +96,6 @@ La menor longitud anotada durante todo el proceso es la respuesta. Si en
 ningún momento el contador llega a $K$, no existe subcadena válida y se
 responde 0.
 
-# Por qué es correcto
-
 La construcción garantiza que cualquier subcadena óptima
 $[L^\star, R^\star]$ se considera al menos una vez. Cuando se procesa el
 evento que hace que la ventana incluya por primera vez el último motivo
@@ -108,9 +106,45 @@ distintos, así que se examina alguna ventana cuya longitud es menor o
 igual que la óptima. Como cada evento se añade una vez y se elimina como
 mucho una vez, la pasada es lineal en el número de eventos.
 
+# Alternativa: barrido por fines de motivo
+
+Hay un planteamiento equivalente que no necesita los eventos ni la
+ventana propiamente dicha. Tras localizar las apariciones del mismo modo
+que antes, cada una se representa por la tripleta $(inicio, fin, id)$ y
+se ordenan por la posición de fin en orden creciente.
+
+Llevamos un único entero por motivo, $\text{latest}[i]$: la mayor
+posición de inicio observada hasta el momento entre las apariciones
+procesadas del motivo $i$ (o $-1$ si aún no se ha visto ninguna).
+Fijado un fin $R$ (la posición del evento que estamos procesando), tenemos
+exactamente la posición más a la derecha en la que puede arrancar una
+aparición completa del motivo $i$ contenida en una ventana
+$[\,?,R\,]$.
+
+Cuando hay al menos $K$ motivos con $\text{latest} \neq -1$, la mejor
+ventana que termina en $R$ se calcula así:
+
+- De entre los $M$ valores de $\text{latest}$ tomamos los $K$ mayores.
+- El menor de esos $K$ es el inicio $L$ de la ventana óptima terminada
+  en $R$.
+- La longitud candidata es $R - L + 1$.
+
+Cualquier ventana óptima acabará justo cuando acabe un motivo (no tiene sentido
+extenderla más), así que al encontrar la ventana más pequeña que acaba en cada
+motivo, estamos barriendo todas las candidatas a ventanas óptimas.
+
+La complejidad asintótica es la misma que la del barrido por eventos: $O(T \log
+T)$ por la ordenación inicial, con $T$ el número total de apariciones. Como el
+número de motivos $M$ está acotado por 25, ordenar la lista entera de
+$\text{latest}$ en cada iteración es trivial y no hace falta una estructura
+adicional para mantener solo los $K$ mayores.  Esta versión es más corta que el
+barrido por eventos: una pasada lineal con un único entero por motivo, sin
+contadores de frecuencia ni reglas de contracción.
+
 # Soluciones
 
-| Solución | Verificado con el juez |
-| :------: | :--------------------: |
-| [L.cpp](src/L.cpp) | :white_check_mark: |
+| Solución | Descripción | Verificado con el juez |
+| :------: | :---------- | :--------------------: |
+| [L.cpp](src/L.cpp) | Ventana deslizante sobre eventos de inicio y fin | :white_check_mark: |
+| [L_barrido.cpp](src/L_barrido.cpp) | Barrido de apariciones por posición de fin con `latest[motivo]` | :white_check_mark: |
 

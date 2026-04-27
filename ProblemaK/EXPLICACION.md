@@ -7,8 +7,8 @@ con un problema de emparejamiento con capacidades en un grafo bipartito,
 que admite dos modelados canónicos:
 
 1. Como **flujo máximo** sobre una red con un nodo por jugador y un nodo por rol.
-2. Como **emparejamiento bipartito clásico** (Hopcroft–Karp) sobre un grafo en
-   el que cada rol se divide en $L$ "asientos" independientes.
+2. Como **emparejamiento bipartito** sobre un grafo en el que cada rol se
+   divide en $L$ "asientos" independientes.
 
 Ambas alternativas dan la misma respuesta y son lo bastante rápidas para los
 límites del problema ($M \le 100$, $K \le 20$, $N \le 200$).
@@ -45,7 +45,7 @@ es $L = \lfloor 12/3 \rfloor = 4$. La red construida es:
 
 ![Red de flujo del primer caso](images/grafo_bipartito.png)
 
-# Alternativa 2: Emparejamiento bipartito con Hopcroft–Karp
+# Alternativa 2: Emparejamiento bipartito
 
 El problema también se puede ver como un emparejamiento bipartito puro (sin
 capacidades) aplicando un truco: **duplicamos cada rol $r$ en $L$ "asientos"
@@ -68,12 +68,19 @@ jugadores (grado $\le 1$ en el lado derecho, que equivale a respetar el cupo
 $L$ de cada rol). La respuesta es `YES` si y sólo si el emparejamiento máximo
 vale $M$ (todos los jugadores quedan emparejados).
 
-Para encontrarlo se usa **Hopcroft–Karp**, que calcula el emparejamiento
-máximo de un grafo bipartito con $V$ vértices y $E$ aristas en
-$O(E \sqrt{V})$. Con los
-límites del problema, $V = M + N \le 300$ y
-$E \le 2 M L \le 2 \cdot 100 \cdot 200 = 40\,000$, lo que deja un margen
-sobradamente cómodo.
+Para calcular el emparejamiento máximo hay dos algoritmos clásicos:
+
+- **Kuhn** (camino aumentante). Para cada vértice del lado izquierdo se
+  busca un camino aumentante mediante un DFS que reasigna emparejamientos
+  sobre la marcha. Coste $O(V \cdot E)$. Es muy corto de codificar.
+- **Hopcroft–Karp**. Agrupa los caminos aumentantes en fases con un BFS
+  inicial, lo que reduce el coste a $O(E \sqrt{V})$. Es asintóticamente
+  más rápido que Kuhn.
+
+Con los límites del problema, $V = M + N \le 300$ y
+$E \le 2 M L \le 2 \cdot 100 \cdot 200 = 40\,000$,
+ambas opciones quedan muy por debajo del límite de tiempo, así que la
+elección es prácticamente de gusto.
 
 ## Ejemplo visual (primer caso)
 
@@ -88,4 +95,5 @@ máximo, que empareja los $4$ jugadores y por tanto da la respuesta `YES`):
 | Solución | Descripción | Verificado con el juez |
 | :------: | :---------- | :--------------------: |
 | [K_flujo.cpp](src/K_flujo.cpp) | Flujo máximo con Dinic | :white_check_mark: |
+| [K_kuhn.cpp](src/K_kuhn.cpp) | Emparejamiento bipartito con Kuhn (duplicando cada rol en $L$ asientos) | :white_check_mark: |
 | [K_matching.cpp](src/K_matching.cpp) | Emparejamiento bipartito con Hopcroft–Karp (duplicando cada rol en $L$ asientos) | :white_check_mark: |
