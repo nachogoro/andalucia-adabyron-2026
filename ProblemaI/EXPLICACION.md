@@ -9,7 +9,7 @@ $N^L \le 46\,656$, y se puede mantener en memoria sin problema.
 La idea base en cualquier estrategia razonable es la misma: después de cada
 respuesta, reducimos el conjunto de candidatos a los que son consistentes con
 todas las respuestas anteriores. Una secuencia $c$ es consistente con un par
-(consulta $g$, respuesta $(v, a)$) si y solo si al comparar $g$ con $c$ se
+(consulta $g$, respuesta $(v, a)$ ) si y solo si al comparar $g$ con $c$ se
 obtendrían esos mismos $(v, a)$. Lo que varía entre estrategias es cómo se
 elige cada siguiente consulta.
 
