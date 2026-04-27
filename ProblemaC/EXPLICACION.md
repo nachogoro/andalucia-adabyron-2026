@@ -51,7 +51,7 @@ La fórmula es satisfacible si y solo si para toda variable $x_i$ los
 vértices $x_i$ y $\lnot x_i$ pertenecen a componentes fuertemente
 conexas (SCC) distintas. Si compartieran SCC, existiría una cadena de
 implicaciones que llevaría de un literal al otro y, dando la vuelta, el
-otro al primero, lo que equivaldría a "$x_i$ cierto $\Rightarrow x_i$
+otro al primero, lo que equivaldría a " $x_i$ cierto $\Rightarrow x_i$
 falso": contradicción.
 
 ## Algoritmo
@@ -70,8 +70,8 @@ cláusulas.
 Para cada fin de semana $i \in [0, k)$ se introduce una variable
 booleana $x_i$:
 
-- $x_i = $ cierto $\Longleftrightarrow$ se elige el espectáculo $A$.
-- $x_i = $ falso $\Longleftrightarrow$ se elige el espectáculo $B$.
+- $x_i = \text{cierto} \Longleftrightarrow$ se elige el espectáculo $A$.
+- $x_i = \text{falso} \Longleftrightarrow$ se elige el espectáculo $B$.
 
 ## Cláusulas de polvos que se agotan
 
@@ -106,11 +106,7 @@ Solo afectan a pares de fines de semana consecutivos. Para cada par
 $(i, i+1)$ y cada combinación $(s_i, s_{i+1}) \in \{A, B\}^2$ se
 calculan:
 
-$$
-u = \#\text{inestables}(s_i)
-\qquad
-v = \#\text{neutralizantes}(s_{i+1}).
-$$
+$$u = \lvert \text{inestables}(s_i) \rvert \qquad v = \lvert \text{neutralizantes}(s_{i+1}) \rvert.$$
 
 Si $v < u$, esa combinación no se puede dar y se añade la cláusula
 
