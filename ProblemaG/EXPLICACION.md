@@ -123,7 +123,7 @@ El greedy lineal ya resuelve $\text{factible}(H)$ en $O(N)$, pero podemos
 hacerlo todavía más rápido observando que la estrategia "*mete el
 siguiente tramo en la brigada actual siempre que quepa*" es equivalente a
 decir: *"extiende la brigada actual el mayor bloque contiguo posible
-empezando donde toca, con suma $\leq H$"*.
+empezando donde toca, con suma* $\leq H$ *"*.
 
 Enfocado así, ya no tiene por qué recorrerse el array tramo a tramo: el
 final de cada brigada se puede localizar directamente con una **búsqueda
